@@ -1,0 +1,6 @@
+<div class="trace-wrapper themed" [ngClass]="theme.theme | async">
+    <div class="trace-element" *ngFor="let element of history.elements | async">
+        <div class="command">{{element.command}}</div>
+        <div class="output" [innerHTML]="element.output"></div>
+    </div>
+</div>

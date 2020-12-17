@@ -1,5 +1,15 @@
 @import 'globals.scss';
-
-p {
+@import 'console-themes.scss';
+.container {
     @include monospace;
+    overflow-x: hidden;
+    &.themed{
+        @include theme;
+    }
+    height: 100vh;
+    width: 100vw;
+    pre{
+        padding: 0;
+        margin: 0;
+    }
 }

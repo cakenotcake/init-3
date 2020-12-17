@@ -1,0 +1,21 @@
+@import 'globals.scss';
+@import 'console-themes.scss';
+.input{
+    &.themed{
+        @include theme;
+    }
+
+    .text {
+        position: relative;
+        &:after{
+            display: block;
+            position: absolute;
+            width: 10px;
+            height: 4px;
+            right: -12px;
+            bottom: -2px;
+            background-color: #777777;
+            content: '';
+        }
+    }
+}

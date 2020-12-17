@@ -1,1 +1,21 @@
-<p>console works!</p>
+<!-- This is the console container component -->
+
+
+<div #consoleContainer class="container themed" [ngClass]="theme.theme | async">
+    <pre class="normal">
+ ______     ______     __  __     ______     __   __     ______     ______   ______     ______     __  __     ______   
+/\  ___\   /\  __ \   /\ \/ /    /\  ___\   /\ "-.\ \   /\  __ \   /\__  _\ /\  ___\   /\  __ \   /\ \/ /    /\  ___\  
+\ \ \____  \ \  __ \  \ \  _"-.  \ \  __\   \ \ \-.  \  \ \ \/\ \  \/_/\ \/ \ \ \____  \ \  __ \  \ \  _"-.  \ \  __\  
+ \ \_____\  \ \_\ \_\  \ \_\ \_\  \ \_____\  \ \_\\"\_\  \ \_____\    \ \_\  \ \_____\  \ \_\ \_\  \ \_\ \_\  \ \_____\
+  \/_____/   \/_/\/_/   \/_/\/_/   \/_____/   \/_/ \/_/   \/_____/     \/_/   \/_____/   \/_/\/_/   \/_/\/_/   \/_____/
+    </pre>
+    <div class="normal">
+        Welcome to the portfolio of 🍰❌🍰. <br>
+        To return to visual website run: init 5 <br>
+        To change the console theme run: set-theme [theme name]<br>
+        For help run: help<br>
+        &nbsp;
+    </div>
+    <app-trace></app-trace>
+    <app-input (request)="processCommand($event)"></app-input>
+</div>

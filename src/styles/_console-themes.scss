@@ -1,0 +1,40 @@
+$monochrome-bg: #131313;
+$monochrome-fg: #f7f7f7;
+
+@mixin monochrome {
+    background: $monochrome-bg;
+    color: $monochrome-fg;
+    .bold {
+        font-weight: 700;
+    }
+}
+
+@mixin solarized {
+    background: #fdf6e3;
+    color: #586e75;
+    .highlight{
+        color: #cb4b16;
+        font-weight: bold;
+    }
+    .accent {
+        color: #268bd2;
+    }
+    .path {
+        color: #859900;
+        font-weight: bold;
+    }
+    .error {
+        font-weight: bold;
+        color: red;
+    }
+}
+
+@mixin theme {
+    &.monochrome{
+        @include monochrome();
+    }
+
+    &.solarized {
+        @include solarized();
+    }
+}
